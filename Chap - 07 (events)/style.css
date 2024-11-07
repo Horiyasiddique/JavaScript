@@ -1,0 +1,50 @@
+#click{
+    color: white;
+    background-color:rgb(1, 1, 83);
+    border: none;
+    border-radius: 5px;
+    position:relative;
+    top: 200px;
+    left: 550px;
+    width: 120px;
+    height: 38px;
+
+}
+
+#box{
+    height: 100px;
+    width: 100px;
+    background-color: cadetblue;
+    color: black;
+}
+
+#submit{
+    color: white;
+    background-color:green;
+    border: none;
+    border-radius: 5px;
+   
+    width: 120px;
+    height: 38px;
+}
+
+#reset{
+    color: white;
+    background-color:rgb(221, 3, 3);
+    border: none;
+    border-radius: 5px;
+   
+    width: 120px;
+    height: 38px;
+}
+
+.light{
+    background-color: white;
+    color: black;
+
+}
+
+.dark{
+    background-color: black;
+    color: white;
+}
