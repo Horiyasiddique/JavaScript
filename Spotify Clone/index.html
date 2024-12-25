@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <!-- navbar starts here -->
+        <nav>
+            <ul>
+                <li id="brand">
+                    <i class="fa-solid fa-headphones-simple" id="logo"></i>
+                    <h1 id=music>Music</h1>
+
+                </li>
+                <li>Home</li>
+                <li>About</li>
+            </ul>
+        </nav>
+    </header>
+
+    <footer>
+        <!--main content [hero page]-->
+        <div class="box">
+            <img src="assets/girl.png" alt="music listening girl">
+
+
+            <div class="songList">
+                <h1>Let the Music Move You!</h1>
+                <div>
+                    <div class="songListContainer">
+                        <!-- song 1 -->
+                        <div class="songItems">
+                            <img src="assets/C1.png" alt="1">
+                            <span class="songName">Let Me Love You</span>
+                            <span class="songListPlay"><span>05 : 33</span> <i id="0" class="fa-solid songItemPlay fa-circle-play"></i>
+                                <!--play icon --></span>
+                        </div>
+                        <!-- song 2 -->
+                        <div class="songItems">
+                            <img src="assets/C1.png" alt="1">
+                            <span class="songName">Let Me Love You</span>
+                            <span class="songListPlay"><span>05 : 33</span> <i id="1" class="fa-solid songItemPlay fa-circle-play"></i>
+                                <!--play icon --></span>
+                        </div>
+                        <!-- song 3 -->
+                        <div class="songItems">
+                            <img src="assets/C1.png" alt="1">
+                            <span class="songName">Let Me Love You</span>
+                            <span class="songListPlay"><span>05 : 33</span> <i id="2" class="fa-solid songItemPlay fa-circle-play"></i>
+                                <!--play icon --></span>
+                        </div>
+                        <!-- song 4 -->
+                        <div class="songItems">
+                            <img src="assets/C1.png" alt="1">
+                            <span class="songName">Let Me Love You</span>
+                            <span class="songListPlay"><span>05 : 33</span> <i id="3" class="fa-solid songItemPlay fa-circle-play"></i>
+                                <!--play icon --></span>
+                        </div>
+                        <!-- song 5 -->
+                        <div class="songItems">
+                            <img src="assets/C1.png" alt="1">
+                            <span class="songName">Let Me Love You</span>
+                            <span class="songListPlay"><span>05 : 33</span> <i id="4" class="fa-solid songItemPlay fa-circle-play"></i>
+                                <!--play icon --></span>
+                        </div>
+                        <!-- song 6 -->
+                        <div class="songItems">
+                            <img src="assets/C1.png" alt="1">
+                            <span class="songName">Let Me Love You</span>
+                            <span class="songListPlay"><span>05 : 33</span> <i id="5" class="fa-solid songItemPlay fa-circle-play"></i>
+                                <!--play icon --></span>
+                        </div>
+                        <!-- song 6 -->
+                        <div class="songItems">
+                            <img src="assets/C1.png" alt="1">
+                            <span class="songName">Let Me Love You</span>
+                            <span class="songListPlay"><span>05 : 33</span> <i id="6" class="fa-solid songItemPlay fa-circle-play"></i>
+                                <!--play icon --></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="songBanner"></div>
+        </div>
+
+        <!--footer -->
+        <div class="bottom">
+            <input type="range" name="range" id="myProgressBar" max="100" min="0" value="0">
+            <div class="icons">
+                <!-- fontawesome icons -->
+                <i class="fa-solid fa-backward-step" id="previous"></i> <!--backward icon -->
+                <i class="fa-solid fa-circle-play" id="masterPlay"></i> <!--play icon -->
+                <i class="fa-solid fa-forward-step" id="next"></i> <!--forward icon-->
+            </div>
+            <div class="songInfo">
+                <img src="assets/gif.gif" alt="Gif for animation" width="70px" id="gif">
+                <h4 class="playedSongName">Humsafar</h4>
+                By
+                <h5 id="singer">Quratullain Baloch</h5>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <!--linking Js flie-->
+    <script src="script.js"></script>
+</body>
+
+</html>
