@@ -1,0 +1,56 @@
+h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+#clockContainer {
+    background: url(clock.png) no-repeat;
+    background-size: 100%;
+    margin: auto;
+    width: 65vw;
+    height: 65vw;
+    position: relative;
+    
+}
+
+#hours,
+#minutes,
+#seconds {
+    position: absolute;
+    transform-origin: bottom;
+
+}
+
+
+#hours {
+    width: 1.2%;
+    height: 11%;
+    top: 23%;
+    left: 49%;
+    opacity: 0.8;
+    background-color: black;
+    border-radius: 1rem;
+
+}
+
+#minutes {
+    width: 1%;
+    height: 12%;
+    top: 22%;
+    left: 49%;
+    opacity: 0.8;
+    background-color: green;
+    border-radius: 1rem;
+
+
+}
+
+#seconds {
+    width: 0.41%;
+    height: 15%;
+    top: 19%;
+    left: 49%;
+    opacity: 0.8;
+    background-color: red;
+    border-radius: 1rem;
+}
