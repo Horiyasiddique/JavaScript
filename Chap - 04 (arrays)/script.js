@@ -69,3 +69,7 @@ companies.push("Amazon");
 console.log(companies);
 companies.splice(1,1,"Ola");
 console.log(companies);
+
+
+let arr = [1,2,3,4,4,5,6,7,8,8];
+console.log(typeof arr)

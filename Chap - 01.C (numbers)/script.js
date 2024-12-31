@@ -40,3 +40,9 @@ let createdDate = new Date(2024, 11, 26);
 console.log(createdDate.toLocaleString());
 
 //time
+let myTimeStamp = Date.now();
+console.log(myTimeStamp); //output: 1735549598149 [milliseconds]
+console.log(Math.round(myTimeStamp / 1000)); //output: 1735549990 [seconds]
+console.log(createdDate.getFullYear()); //output : 2024
+console.log(createdDate.getDate()); //output : 26
+console.log(createdDate.getDay()); //output : 4

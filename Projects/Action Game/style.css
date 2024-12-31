@@ -24,8 +24,8 @@ body{
     background-image: url(./assets/decoit.png);
     background-size: cover;
     position: absolute;
-    width: 114px;
-    height: 119px;
+    width: 82px;
+    height: 97px;
     transform: scaleX(-1);
     bottom: 0;
     left: 10px;
@@ -36,8 +36,8 @@ body{
     background-image: url(./assets/policeman.png);
     background-size: cover;
     position: absolute;
-    width: 127px;
-    height: 207px;
+    width: 102px;
+    height: 161px;
     transform: scaleX(1);
     bottom: 0;
     left: 60%;
