@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+   max-width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/*Project 1 styling*/
+#project1 {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cadetblue;
+
+}
+
+#card {
+    width: 300px;
+    height: 450px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#card img {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    background-position: center;
+}
+
+h1 {
+    font-size: 30px;
+    font-family: sans;
+    text-align: center;
+    margin-top: 3px;
+}
+
+h5 {
+    font-size: 25px;
+    font-family: serif;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(255, 46, 46);
+    margin-top: 15px;
+}
+
+
+button {
+    font-size: 17px;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 14px;
+    background-color: skyblue;
+    cursor: pointer;
+    margin-left: 80px;
+    margin-top: 25px;
+}
+
+/*Project 2 styling*/
+#project2 {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: crimson;
+}
+
+#post {
+    height: 400px;
+    width: 290px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    position: relative;
+
+}
+
+#baby {
+    height: 400px;
+    width: 280px;
+    border-radius: 10px;
+    object-fit: cover;
+    background-position: center;
+}
+
+#post i {
+    font-size: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: red;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: all ease-out 0.5s;
+}
+
+/*project 3 styling*/
+#project3 {
+    width: 100vw;
+    height: 100vh;
+    background-color: chocolate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+#project3 h1 {
+    font-size: 10vw;
+    color: white;
+    font-weight: 900;
+    font-style: italic;
+}
+
+#cursor {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+    transition: all linear 0.2s;
+    mix-blend-mode: difference;
+}
+
+#project4 {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #111;
+    color: #fff;
+    position: relative;
+
+}
+
+.elem {
+    height: 200px;
+    width: 100%;
+    border-bottom: 2px solid white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+.elem h1 {
+    font-size: 6vw;
+    position: relative;
+    z-index: 9;
+    mix-blend-mode: difference;
+}
+
+.elem img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    opacity: 0;
+    position: absolute;
+    transition: all linear 0.2s;
+    
+}
+
+/*Project 5 styling*/
+#project5{
+    width: 100vw;
+    height: 100vh;
+    background-color: palevioletred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#card5{
+    height: 400px;
+    width: 280px;
+    border-radius: 12px;
+    background-color: #dadada;
+    position: relative;
+}
+
+#stories{
+    width: 100%;
+    height: 120px;
+    border-bottom: 1px solid red;
+    padding: 0px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#stories::-webkit-scrollbar{
+    display: none;
+}
+
+.story{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid green;
+    display: inline-block;
+    overflow: hidden;
+
+}
+
+.story img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+
+}
+
+
+
+#full-screen{
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display:none;
+    transition: display ease-in 1s;
+}

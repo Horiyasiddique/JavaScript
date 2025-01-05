@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Light Theme*/
+.light {
+    background: linear-gradient(to bottom, #FFDEE9, #B5FFFC);
+    width: 80%;
+    padding: 100px 40px;
+    border-radius: 20px;
+}
+
+/*Dark Theme*/
+.dark {
+    background: linear-gradient(to bottom, #41295A, #2F0743);
+    width: 80%;
+    padding: 100px 40px;
+    border-radius: 20px;
+
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+#para {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 7px;
+    background: linear-gradient(to bottom, #FFF1EB, #ACE0F9);
+    cursor: pointer;
+
+}

@@ -47,3 +47,14 @@ console.log(restraunt2)
 
 let restraunts = Object.assign({}, restraunt , restraunt2)
 console.log(restraunts)
+
+
+//DESTRUCTURING OF OBJECTS 
+let course = {
+  courseName : 'Ultimate Python',
+  courseFee : 'free',
+  courseInstructor : 'YouTube'
+}
+
+let {courseInstructor : instructor} = course
+console.log(instructor)

@@ -111,6 +111,20 @@ const largestNum = array.reduce((previous, current) => {
 });
 
 console.log(largestNum);
+//Functions with array
+function getSecondElement(array) {
+  return array[1]
+  
+}
+
+console.log(getSecondElement([200,300,6700]))
+
+//Functions with Objects 
+function books(bookInfo){
+  return `Book name is ${bookInfo.name} and the author is ${bookInfo.author}`
+}
+
+console.log(books({name: 'Atomic Habits', author: 'James Clear'}))
 
 //Practice set
 //QUESTION 01
@@ -145,3 +159,11 @@ let multiplication = number.reduce((previous, current) => {
   return previous * current;
 });
 console.log(`MULTIPLICATION: ${multiplication}`);
+
+
+function sum(num1, num2) {
+  console.log(`Addition of ${num1} and ${num2} is ${num1 + num2}`);
+}
+
+sum(10, 2);
+
