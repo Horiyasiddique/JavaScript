@@ -167,3 +167,15 @@ function sum(num1, num2) {
 
 sum(10, 2);
 
+//**********************Immediately Invoked Function Expression [IIFe]**********************
+//++++++++++++++++INTERVIEW QUESTIONS++++++++++++++++++++++++
+//Q: WHY WE USE IIFE ? To avoid global variables pollution and to invoked in immediately 
+// just wrap your function in () and call it on the same line 
+(function intro(){
+  console.log('I am horiya')
+})();
+
+//!!!!!!!!!!!!!!semicolon ; after calling IIFE is necessary to write 2 IIFE in one file ; is necesary
+((PL)=>{
+  console.log(`which is your favorite programming language ? my favorite language is ${PL}`);
+})('JavaScript');

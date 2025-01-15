@@ -1,102 +1,104 @@
-// //Acessing elemnt by id name
-// let heading = document.getElementById("heading1");
-// console.dir(heading);
+// ********************** Access by ID Name ***************************
+let name = document.getElementById("name");
+name.innerHTML = "<h1> قیدی نمبر 804 </h1>"; //changing inner text of #name [h1]
 
-// //Accessing element by class name
-// let paragraphs = document.getElementsByClassName("parahs");
-// console.dir(paragraphs);
+// checking class of this partcular id element
+document.getElementById("name").className; //output : // 'title'
 
-// //Acessing element by it's tag name
-// let tagsName = document.getElementsByTagName("header");
-// console.dir(tagsName)
+//getting value of attribute class
+document.getElementById("name").getAttribute("class"); //output: // 'title'
 
-// //Query selector
+//setting new value in class attribute
+document.getElementById("name").setAttribute("class", "test");
 
-// let element = document.querySelector("#heading1");
-// console.dir(element);
+// ++++++++++ differnece b/w innerHTML, textContent and innerText ++++++++++++++++++
+// .innerHTML support Html tags while textContent and innerText do not
+// .innerText shows only visible text on page
+//textContent shows all the content either it visible or hidden [sometimes tect is hidden on page due to CSS styling]
 
-// let allElement = document.querySelectorAll(".parahs");
-// console.log(allElement);
+// ********************** Access by class name **********************
+document.getElementsByClassName("title");
 
-// //DOM MANIPULINATION
-// //1) tag name
-// let tagname = document.querySelector("h1");
-// console.log(tagname.tagName);
+// ********************** Access by query selector ****************
+let skill = document.querySelector("li");
+skill.style.backgroundColor = "yellow";
+skill.style.color = "black";
+skill.style.fontSize = "32px";
 
-// //2) inner text
-// let unoderedList = document.querySelector("ul");
-// console.log(unoderedList.innerText)
+// ********************* quey selector All ***********************
+let allSkills = document.querySelectorAll("li");
+console.log(allSkills); //node list
+// allSkills.style.backgroundColor = 'blue'; !!!!!!!! error can not set properties of undefined
+allSkills.forEach((item) => {
+  item.style.backgroundColor = "red";
+});
 
-// //3) inner HTML
-// console.log(unoderedList.innerHTML);
+// !!node lists are not pure array but very similar to an array
 
-// //4) Text content
-// let hidden = document.querySelector("#hiddenHeading");
-// console.log(hidden.textContent)
+// ************************ Access by class NAme ***************
+let links = document.getElementsByClassName("links");
+console.log(links); //HTML collection it does not has properties and methods of an  array
 
-// // PRACTICE SET
-// // QUESTION 01
-// // create a heading of h2 with hext "hello javascript". append the text in last from "apna college"
+// ???????????? how to convert html collection into an array ??????????????
+let convertedArr = Array.from(links);
+console.log(convertedArr); //now it has properties and methods f an array bcz it has converted
+convertedArr.forEach((items) => {
+  items.style.backgroundColor = "blue";
+  items.style.color = "white";
+});
 
-// let question1 = document.querySelector("#hello");
-// console.log(question1.innerText);
-// let append = (question1.innerText = question1.innerText + "From Apna College");
-// console.log(append);
+// ****************node list ***************
+let parent = document.querySelector(".parent");
+console.log(parent.children[2].innerHTML);
+let convertedParentArr = Array.from(parent.children);
+convertedParentArr.forEach((item) => {
+  item.innerHTML = item.innerHTML.toUpperCase();
+});
 
-// //QUESTION 02
+let dayOne = document.querySelector(".days");
+console.log(dayOne.parentElement); //to access parent element
+console.log(dayOne.nextElementSibling); //to access next tag [tuesday]
 
-// let divs = document.querySelectorAll(".box");
-// let idx = 0;
-// for (div of divs) {
-//   div.innerText = `new unique value ${idx}`;
-//   idx++;
-// }
+// ***************** create element ****************
+// ******************* task **************
+function createDiv(color, text) {
+  let div = document.createElement("div");
+  div.style.padding = "14px";
+  let addText = document.createTextNode(text);
+  div.appendChild(addText);
+  div.style.backgroundColor = color;
+  document.querySelector("body").appendChild(div);
+}
 
-// //get attribute
+createDiv(
+  "brown",
+  "I am Passionate student of Sir Hitesh Chaudhary but I do not know why I do not like chai ☕"
+);
+createDiv(
+  "green",
+  "kia hua bhaiiee pdhaii no hori na tum se focus k sath mobile switched off krdo solid solution hy 📵 "
+);
 
-// let attr = document.querySelector(".box").getAttribute("class");
-// console.log(attr);
+// ************ edit or remove elements ***********************
 
-// //set attribute
-// let newAttr = document.querySelector("p").setAttribute("class","myPara")
-// console.log(newAttr)
+function addLanguages(languageName) {
+  let li = document.createElement("li");
+  li.appendChild(document.createTextNode(languageName))
+  document.querySelector('.language').appendChild(li)
+}
 
-// //node.style
-// let name1 = document.querySelector("#myId")
-// name1.style.backgroundColor = "green"
-// name1.style.fontSize = "20px"
-// name1.innerText = "hello world"
+addLanguages('Python');
+addLanguages('Ruby');
+addLanguages('Java');
+addLanguages('C++');
 
-// //insert elements
-// let btn = document.createElement("button")
-// btn.innerText = "submit"
-// let newDiv = document.querySelector("#myId");
+// edit functionality 
+let secondLang = document.querySelector('li:nth-child(2)')
+//console.log(secondLang)
+let newLi = document.createElement('li');
+newLi.textContent = 'TypeScript';
+secondLang.replaceWith(newLi);
 
-// //.append
-// // newDiv.append(btn)
-
-// //.prepend
-// newDiv.prepend(btn)
-
-// //.before
-// // newDiv.before(btn)
-
-// //.after
-// // newDiv.after(btn)
-
-//Practice set
-//QUESTION 01
-//Create a button give it a text "click me" background color of red and color white. insert it inside the body tag as first element
-
-let newButton = document.createElement("button");
-newButton.innerText = "Click me!";
-newButton.style.color = "white";
-newButton.style.backgroundColor = "red";
-let box = document.querySelector("body");
-box.prepend(newButton);
-
-//QUESTION 02
-//Create a <P> tag in html give it a class and some styling .now create a new class in css and try to append this to the <p> element .use classList method
-
-let q2para = document.querySelector("p");
-q2para.classList.add("newContent");
+//remove functionality
+let lastLanguage = document.querySelector('li:last-child');
+lastLanguage.remove()

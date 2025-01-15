@@ -33,28 +33,42 @@ console.log(hospital[patient_controller]);
 //Q) what i the difference b/w const obj = {} & const obj = new Object()
 // first one is a non singleton onject and second one is  a singleton object
 
-//method 2 singli ton 
+//method 2 single ton
 //how to merge 2 objects
-const restraunt = new Object()
-restraunt.name = 'Ibne Batoota'
-restraunt.location = 'karachi'
- console.log(restraunt)
+const restraunt = new Object();
+restraunt.name = "Ibne Batoota";
+restraunt.location = "karachi";
+console.log(restraunt);
 
-const restraunt2 = new Object()
-restraunt2.menu = 'Desi'
-restraunt2.ratings = '5'
-console.log(restraunt2)
+const restraunt2 = new Object();
+restraunt2.menu = "Desi";
+restraunt2.ratings = "5";
+console.log(restraunt2);
 
-let restraunts = Object.assign({}, restraunt , restraunt2)
-console.log(restraunts)
+let restraunts = Object.assign({}, restraunt, restraunt2);
+console.log(restraunts);
 
-
-//DESTRUCTURING OF OBJECTS 
+//DESTRUCTURING OF OBJECTS
 let course = {
-  courseName : 'Ultimate Python',
-  courseFee : 'free',
-  courseInstructor : 'YouTube'
-}
+  courseName: "Ultimate Python",
+  courseFee: "free",
+  courseInstructor: "YouTube",
+};
 
-let {courseInstructor : instructor} = course
-console.log(instructor)
+let { courseInstructor: instructor } = course;
+console.log(instructor);
+
+// This keyword [this represents current context means current value]
+
+let myself = {
+  name: "horiya",
+  grade: "9th",
+  subject: "Computer Science",
+  message: function () {
+    console.log(`${this.name} welcome in grade ${this.grade}`);
+  },
+};
+
+myself.message(); //output : horiya welcome in grade 9th
+myself.grade = "10th"
+myself.message(); //output : horiya welcome in grade 10th

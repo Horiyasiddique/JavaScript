@@ -145,8 +145,3 @@ if(percentage >= 80 && percentage <= 100){
 }
 
 
-const id = Symbol('124')
-console.log(id)
-const anotherId = Symbol('124')
-console.log(anotherId)
-
