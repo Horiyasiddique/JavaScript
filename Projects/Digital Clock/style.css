@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #212121;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h4 {
+    font-size: 28px;
+}
+
+.main {
+    width: 40%;
+    height: 27%;
+    border: 1px dashed white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+#clock {
+    width: 50%;
+    height: 30%;
+    padding: 10px 5px;
+    background-color: darkorange;
+    color: black;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    font-family: monospace;
+}
