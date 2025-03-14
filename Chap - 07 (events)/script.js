@@ -1,54 +1,104 @@
-//EVENT LISTENERS
-//onclick
-let button = document.querySelector("#click");
-button.onclick = () => {                                 //we can also use ondblclick
-  console.log("button was clicked");
-};
+/**
+ * type, timestamp, defaultPrevented, toElement, srcElement
+ * currentTarget, clientX, clientY, screenX, screenY, altKey, ctrlkey, shiftkey
+ */
+//! JS is synchronous language so events in JS also behave synchronously
 
-//onmouseover
-let div = document.querySelector("#box");
-div.onmouseover = () => {
-  console.log("You are inside the box");
-};
+/**
+ * ??????????????  what is event propagation ???????????????
+ * 2 types of event propagation : bubbling , capturing
+ * bubbling :- bottom to top
+ * capturing :- top to bottom
+ *
+ */
 
-//Event Objects
-let submit = document.querySelector("#submit");
-submit.ondblclick = (e)=>{
-    console.log(e)
-    console.log(e.target)
-    console.log(e.type)
-    console.log(e.clientX)
-    console.log(e.clientY)
-}
+//+++++++++++++++++++++ example of bubbling ++++++++++++++++++++++
+// const container = document.querySelector("ul");
+
+// container.addEventListener(
+//   "click",
+//   () => {
+//     console.log("container has soo many beautiful images 🤩🤩");
+//   },
+//   false
+// );
+
+// const cakeImg = document.querySelector("#cake");
+
+// cakeImg.addEventListener(
+//   "click",
+//   () => {
+//     console.log("cake is delecious 🤤🤤");
+//   },
+//   false
+// );
+
+// conclusion : when I click on images other than cake image container has soo many beautiful images 🤩🤩 print in console pannel but when I click on cake image cake is delecious 🤤🤤print first and after that container has soo many beautiful images 🤩🤩 printed in console [bottom to top]
+
+// ++++++++++++++++++++++++ example of capturing ++++++++++++++++++++++++
+// const container = document.querySelector("ul");
+
+// container.addEventListener(
+//   "click",
+//   () => {
+//     console.log("container has soo many beautiful images 🤩🤩");
+//   },
+//   true
+// );
+
+// const cakeImg = document.querySelector("#cake");
+
+// cakeImg.addEventListener(
+//   "click",
+//   () => {
+//     console.log("cake is delecious 🤤🤤");
+//   },
+//   true
+// );
+
+// conclusion : when I click on images other than cake image container has soo many beautiful images 🤩🤩 print in console pannel but when I click on cake image container has soo many beautiful images 🤩🤩 print first and after that cake is delecious 🤤🤤 printed in console [top to bottom]
+
+// +++++++++++++++++++ stop propagation just like preventDefault ++++++++++++++++++++++
+/** it will stop propagation  */
+
+// const container = document.querySelector("ul");
+
+// container.addEventListener(
+//   "click",
+//   (e) => {
+//     console.log("container has soo many beautiful images 🤩🤩");
+//   },
+//   false
+// );
+
+// const cakeImg = document.querySelector("#cake");
+
+// cakeImg.addEventListener(
+//   "click",
+//   (e) => {
+//     console.log("cake is delecious 🤤🤤");
+//     e.stopPropagation(); //now it is not bubbling from bottom to top it is just priniting cake is delecious in console
+//   },
+//   false
+// );
 
 
-//Event Listeners
-submit.addEventListener("click", ()=>{
-    console.log("form have been submitted")
-})
+// ++++++++++++++++++ task 01 ++++++++++++++++++++++
+//when we click on image and image should be diappear
+// const images = document.querySelector('ul')
+// images.addEventListener('click', (e)=>{
+//     let removeElem = e.target.parentNode
+//     console.log(removeElem)
+//     removeElem.remove()
 
-//remove vent listener
-let reset  = document.querySelector("#reset")
-const Reset = ()=>{console.log("form reset!")}
-reset.addEventListener("click",Reset)
-reset.removeEventListener("click",Reset)
+// },false) //there is a bug when we click on ul whole bode is removing bcz body i parent of ul tag let debug it
 
-//Practice set
-
-let toggleBtn = document.querySelector("#mode");
-let body = document.querySelector("body");
-let mode = "light"
-
-toggleBtn.addEventListener("click",()=>{
-    if(toggleBtn === "light"){
-        mode = "dark";
-        body.classList.add("dark")
-        body.classList.remove("light")
-    }else{
-        mode = "light";
-        body.classList.add("light")
-        body.classList.remove("dark")
+const images = document.querySelector('ul')
+images.addEventListener('click', (e)=>{
+    if(e.target.tagName === 'IMG'){
+        let removeElem = e.target.parentNode
+        console.log(removeElem)
+        removeElem.remove() 
     }
-
-    console.log(mode)
-})
+    console.log(e.target.tagName)
+},false)
