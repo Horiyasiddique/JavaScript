@@ -289,3 +289,87 @@ let obj2 = {
 
 let mergedObj = { ...obj1, ...obj2 };
 console.log(mergedObj);
+
+/**
+ * Day : 05
+ * 3️⃣8️⃣ Use a for loop to print numbers from 1 to 10.
+ * 3️⃣9️⃣ Use a for loop to print only the even numbers between 1 and 20.
+ * 4️⃣0️⃣ Use a for loop to calculate the sum of all numbers from 1 to 100. Print the sum.
+ * 4️⃣1️⃣ print tables from 1 to 10
+ * 4️⃣2️⃣ Use a while loop to print numbers from 10 to 1 (in reverse order).
+ * 4️⃣3️⃣ Use a do...while loop to print numbers from 1 to 5.
+ * 4️⃣4️⃣ Use a for...of loop to print all the elements of an array [10, 20, 30, 40, 50].
+ * 4️⃣5️⃣ Use a for...in loop to print all the keys and values of the object.
+ * 4️⃣6️⃣  Use nested loops to print the following pattern:
+ *
+ **
+ ***
+ ****
+ *****
+ */
+
+//Solution 38
+for (let i = 1; i < 11; i++) {
+  console.log(i);
+}
+
+//Solution 39
+for (let i = 1; i < 21; i++) {
+  if (i % 2 === 0) {
+    console.log(`Even Number : ${i}`);
+  }
+}
+
+//Solution 40
+let result = 0;
+for (let i = 1; i <= 100; i++) {
+  result += i;
+}
+console.log(`The sum of of numbers ofrom 1 to 100 is : ${result}`);
+
+//Solution 41
+for (let i = 1; i <= 10; i++) {
+  for (let j = 1; j <= 10; j++) {
+    console.log(`${i} * ${j} = ${i * j}`);
+  }
+}
+
+//Solution 42
+let i = 10;
+while (i >= 0) {
+  console.log(`the value of i is : ${i}`);
+  i--;
+}
+
+//Solution 43
+let score = 1;
+do {
+  console.log(`Your score is : ${score}`);
+  score++;
+} while (score <= 5);
+
+//Solution 44
+let heroes = ["Batman", "Superman", "Spiderman"];
+for (const hero of heroes) {
+  console.log(`Hero is : ${hero}`);
+}
+
+//Solution 45
+let myIntro = {
+  name: "Hooriya Siddiqui",
+  age: 14,
+  profession: "Software Engineer",
+};
+
+for (const key in myIntro) {
+  console.log(`My ${key} is ${myIntro[key]}.`);
+}
+
+//Solution 46
+for (let i = 0; i <= 5; i++) {
+  let pattern = "";
+  for (let j = 0; j <= i; j++) {
+    pattern += "*";
+  }
+  console.log(pattern);
+}
