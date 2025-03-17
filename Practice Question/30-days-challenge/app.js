@@ -373,3 +373,50 @@ for (let i = 0; i <= 5; i++) {
   }
   console.log(pattern);
 }
+
+/**
+ * Day 06
+ * 4️⃣7️⃣ Create a Simple Function: Write a function called greet that takes a name as a parameter and prints "Hello, [name]!".
+ * 4️⃣8️⃣ Function with Return Value: Write a function called add that takes two numbers as parameters and returns their sum.
+ * 4️⃣9️⃣ Default Parameters: Write a function called multiply that takes two numbers as parameters. If the second parameter is not provided, it should default to 1. Return the product of the two numbers.
+ * 5️⃣0️⃣ Arrow Function: Write the sub function
+ * 5️⃣1️⃣ Write a function called operate that takes two numbers and a callback function as parameters. The callback function should perform an operation (e.g., add, subtract, multiply) on the two numbers. Call operate with different operations.
+ */
+
+//Solution 47
+function greet(name) {
+  console.log(`Hello ${name} 👋🏻`);
+}
+
+greet("Hooriya Siddiqui");
+
+//Solution 48
+function add(num1, num2) {
+  return `The sum of ${num1} and ${num2} is : ${num1 + num2}`;
+}
+
+console.log(add(2, 5));
+
+//Solution 49
+function multiply(num1, num2 = 1) {
+  return `The Product of ${num1} and ${num2} is : ${num1 * num2}`;
+}
+
+console.log(multiply(2, 3));
+console.log(multiply(12));
+
+// Solution 50
+const sub = (num1, num2) => {
+  return `${num1} - ${num2} is equal to ${num1 - num2}`;
+};
+
+console.log(sub(3, 2));
+
+//Solution 51
+const operate = (num1, num2, fn) => {
+  return fn(num1, num2);
+};
+
+console.log(operate(2, 5, multiply));
+console.log(operate(2, 5, add));
+console.log(operate(2, 5, sub));
