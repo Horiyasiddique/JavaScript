@@ -420,3 +420,79 @@ const operate = (num1, num2, fn) => {
 console.log(operate(2, 5, multiply));
 console.log(operate(2, 5, add));
 console.log(operate(2, 5, sub));
+
+/**
+ * Day: 07
+ * 5️⃣2️⃣  Find the Largest Number in an Array .
+ * 5️⃣3️⃣Find the Smallest Number in an Array .
+ * 5️⃣4️⃣Reverse an Array .
+ *5️⃣5️⃣ Write a function that takes an array and an element, and returns true if the element exists in the array,    otherwise false.
+ *5️⃣6️⃣ Remove Duplicates from an Array
+ */
+
+//Solution 52
+const findLargest = (arrOfnums) => {
+  let largest = arrOfnums[0];
+  for (let i = 1; i < arrOfnums.length; i++) {
+    if (largest < arrOfnums[i]) {
+      largest = arrOfnums[i];
+    }
+  }
+  return `The largest number in this array is : ${largest}`;
+};
+
+console.log(findLargest([10, 20, 30, 40]));
+console.log(findLargest([-2, -4, -7, 0]));
+
+//Solution 53
+const findSmallest = (arrOfNums) => {
+  let smallest = arrOfNums[0];
+  for (let i = 1; i < arrOfNums.length; i++) {
+    if (smallest > arrOfNums[i]) {
+      smallest = arrOfNums[i];
+    }
+  }
+
+  return `The smallest number in this array is : ${smallest}`;
+};
+
+console.log(findSmallest([10, 20, 30, 40]));
+console.log(findSmallest([0, -2, -3, -9]));
+
+//Solution 54
+const reverseArr = (arrOfnums) => {
+  return `reverse array is : ${arrOfnums.reverse()}`;
+};
+
+console.log(reverseArr([1, 2, 3, 4, 5]));
+
+//Solution 55
+const elementExist = (arrOfnums, element) => {
+  if (arrOfnums.includes(element)) {
+    return `YES! ${element} exist in array`;
+  } else {
+    return `NO! ${element} does not exist in array`;
+  }
+};
+
+console.log(elementExist([2, 3, 4, 5], 5));
+console.log(elementExist([2, 3, 4, 5], 8));
+
+//Solution 56
+const removeDuplicates = (arrOfNums) => {
+  let newArr = [];
+  for (let i = 0; i < arrOfNums.length; i++) {
+    if (!newArr.includes(arrOfNums[i])) {
+      newArr.push(arrOfNums[i]);
+    }
+  }
+
+  return newArr;
+};
+
+console.log(removeDuplicates([1, 2, 3, 3, 4, 5, 2]));
+console.log(removeDuplicates([5, 5, 5, 5]));
+
+// EFFECIENT AND MORE CONSIZE WAY TO SOLVE QUESTION 56 BY USING BUILT IN METHODS 🤩🤩🤩🤩
+const removeDuplicates2 = (arrOfNums) => [...new Set(arrOfNums)];
+console.log(removeDuplicates([1, 2, 3, 3, 4, 5, 2])); // Output: [1, 2, 3, 4, 5]
