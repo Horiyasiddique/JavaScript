@@ -496,3 +496,44 @@ console.log(removeDuplicates([5, 5, 5, 5]));
 // EFFECIENT AND MORE CONSIZE WAY TO SOLVE QUESTION 56 BY USING BUILT IN METHODS 🤩🤩🤩🤩
 const removeDuplicates2 = (arrOfNums) => [...new Set(arrOfNums)];
 console.log(removeDuplicates([1, 2, 3, 3, 4, 5, 2])); // Output: [1, 2, 3, 4, 5]
+
+/**
+ * Day : 08
+ * 5️⃣7️⃣Create a Function to Add a Property.
+ * 5️⃣8️⃣Create a Function to Check if a Property Exists.
+ * 5️⃣9️⃣Create a Function to Count Object Properties.
+ * 6️⃣0️⃣Create a Function to Print Object Properties.
+ */
+
+//Solution 57
+const addProperty = (obj, key, value) => {
+  obj[key] = value;
+  return obj;
+};
+
+let obj = { name: "Ali" };
+console.log(addProperty(obj, "age", 14));
+
+//Solution 58
+const checkProperty = (obj, key) => {
+  return key in obj;
+};
+
+console.log(checkProperty(obj, "age"));
+console.log(checkProperty(obj, "city"));
+
+//Solution 59
+const countObjectProperties = (obj) => {
+  return Object.keys(obj).length;
+};
+
+console.log(countObjectProperties(obj));
+
+//Solution 60
+const printProperties = (obj) => {
+  for (const key in obj) {
+    console.log(`${key} : ${obj[key]}`);
+  }
+};
+
+printProperties(obj);
