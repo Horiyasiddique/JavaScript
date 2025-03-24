@@ -537,3 +537,72 @@ const printProperties = (obj) => {
 };
 
 printProperties(obj);
+
+/**
+ * Day : 09
+ * 6️⃣1️⃣Write a function that uses a callback to simulate an asynchronous operation (e.g., setTimeout).
+ * 6️⃣2️⃣Write a function that returns a promise to simulate an asynchronous operation (e.g., fetching data).
+ * 6️⃣3️⃣Rewrite the promise-based function using async/await.
+ * 6️⃣4️⃣Write a function that handles errors using .catch().
+ * 6️⃣5️⃣Rewrite the error-handling function using try/catch.
+ * 6️⃣6️⃣fetch an API using try catch for error handling and async await await for modern and cleaner syntax
+ */
+
+//Solution 61
+console.log(1);
+console.log(2);
+function callback() {
+  setTimeout(() => {
+    console.log(3);
+  }, 1000);
+}
+callback();
+console.log(4);
+
+//Solution 62
+function fetchedData() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("data fetched successfully!");
+    }, 2000);
+  });
+}
+
+fetchedData().then((data) => console.log(data));
+
+//Solution 63
+async function fetchedDataAsync() {
+  const data = await fetchedData();
+  console.log(data);
+}
+
+fetchedDataAsync();
+
+//Solution 64
+fetchedData()
+  .then((data) => console.log(data))
+  .catch((error) => console.error(error));
+
+//Solution 65
+async function fetchDataAsync() {
+  try {
+    const data = await fetchedData();
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+fetchDataAsync();
+
+//Solution 66
+async function getQuotes() {
+  try {
+    const response = await fetch("https://dummyjson.com/quotes");
+    const responseToJson = await response.json();
+    console.log(responseToJson);
+  } catch (error) {
+    console.error("Error!");
+  }
+}
+
+getQuotes();
